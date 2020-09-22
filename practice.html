@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>index</title>
+        <link rel="stylesheet" href="CSS/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        
+        <div class="display">
+
+            <div class="flex-container"> 
+                <kbd>A</kbd>
+                <span class="sound">Analog</span>
+            </div>
+
+            <div class="flex-container">
+                <kbd>S</kbd>
+                <span class="sound">Gospel</span>
+            </div>
+
+            <div class="flex-container">
+                <kbd>D</kbd>
+                <span class="sound">Kick</span>
+            </div>
+            <div class="flex-container">
+                <kbd>F</kbd>
+                <span class="sound">Rumba</span>
+            </div>
+
+        </div>
+
+        <audio data-key="65" src="loops/Analog.wav"></audio>
+        <audio data-key="83" src="loops/Gospel.wav"></audio>
+        <audio data-key="68" src="loops/Kick.wav"></audio>
+        <audio data-key="70" src="loops/Rumba.wav"></audio>
+
+
+        <script>
+
+            window.addEventListener('keydown',function(event)
+            {
+                // console.log(event);
+                
+                const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
+                console.log(audio);
+                if (!audio) return;
+                audio.currentTime=0;
+                audio.play();
+            } )
+            
+        </script> 
+        
+    </body>
+</html>

@@ -1,0 +1,35 @@
+
+body{
+    margin:10%;
+    padding: 5%
+}
+
+.display {
+    display:flex;
+    
+    font-family: 'Courier Prime', monospace;
+    justify-content: center;
+}
+
+.flex-container  {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    width: 110px;
+    margin: 10px;
+    text-align: center;
+    line-height: 45px;
+    color:#686963;
+    border-radius:3%;
+    border:solid grey 2px;
+}
+
+kbd{
+    padding:15px;
+    font-family: 'Courier Prime', monospace;
+    color:#DB5461;
+    font-weight:bold;
+}
+
+span.sound{
+    padding:15px;
+}

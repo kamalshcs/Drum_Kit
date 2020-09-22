@@ -8,31 +8,31 @@
         
         <div class="display">
 
-            <div class="flex-container"> 
+            <div data-key="65" class="flex-container" onclick="PlaySound1('p1')" ondblclick="StopSound1('p1')"> 
                 <kbd>A</kbd>
                 <span class="sound">Analog</span>
             </div>
 
-            <div class="flex-container">
+            <div data-key="83" class="flex-container" onclick="PlaySound2('p2')" ondblclick="StopSound2('p2')">
                 <kbd>S</kbd>
                 <span class="sound">Gospel</span>
             </div>
 
-            <div class="flex-container">
+            <div data-key="68" class="flex-container" onclick="PlaySound3('p3')" ondblclick="StopSound3('p3')">
                 <kbd>D</kbd>
                 <span class="sound">Kick</span>
             </div>
-            <div class="flex-container">
+            <div data-key="70" class="flex-container" onclick="PlaySound4('p4')" ondblclick="StopSound4('p4')">
                 <kbd>F</kbd>
                 <span class="sound">Rumba</span>
             </div>
 
         </div>
 
-        <audio data-key="65" src="loops/Analog.wav"></audio>
-        <audio data-key="83" src="loops/Gospel.wav"></audio>
-        <audio data-key="68" src="loops/Kick.wav"></audio>
-        <audio data-key="70" src="loops/Rumba.wav"></audio>
+        <audio id='p1' data-key="65" src="loops/Analog.wav"></audio>
+        <audio id='p2' data-key="83" src="loops/Gospel.wav"></audio>
+        <audio id='p3' data-key="68" src="loops/Kick.wav"></audio>
+        <audio id='p4' data-key="70" src="loops/Rumba.wav"></audio>
 
 
         <script>
@@ -42,11 +42,53 @@
                 // console.log(event);
                 
                 const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
-                console.log(audio);
                 if (!audio) return;
                 audio.currentTime=0;
                 audio.play();
             } )
+
+            function PlaySound1() {
+                var thissound=document.getElementById('p1');
+                thissound.play();
+            }
+
+            function StopSound1() {
+                var thissound=document.getElementById('p1');
+                thissound.pause();
+            }
+
+            function PlaySound2() {
+                var thissound=document.getElementById('p2');
+                thissound.play();
+            }
+
+            function StopSound2() {
+                var thissound=document.getElementById('p2');
+                thissound.pause();
+            }
+
+            function PlaySound3() {
+                var thissound=document.getElementById('p3');
+                thissound.play();
+            }
+
+            function StopSound3() {
+                var thissound=document.getElementById('p3');
+                thissound.pause();
+            }
+
+            function PlaySound4() {
+                var thissound=document.getElementById('p4');
+                thissound.play();
+            }
+
+            function StopSound4() {
+                var thissound=document.getElementById('p4');
+                thissound.pause();
+            }
+
+            
+
             
         </script> 
         
